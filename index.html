@@ -1,0 +1,24 @@
+<div id="root"></div>
+<script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.development.js"></script>
+<script type="text/javascript">
+
+const rootElement = document.getElementById('root')
+// const element = document.createElement('div')
+// element.textContent = 'Hello World'
+// element.className = 'container'
+// rootElement.appendChild(element)
+
+// React createElement API is as simple as the element that you want to create,
+// and then an object that has all of the props that you want to have applied.
+const element = React.createElement(
+  'div', {
+    className: 'container',
+    children: 'Hello world'
+  })
+  // the children can be placed as arguments after the props object instead of as a prop itself
+  // that is more for convenience
+console.log(element)
+ReactDOM.render(element, rootElement)
+
+</script>
