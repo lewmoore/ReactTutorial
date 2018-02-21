@@ -22,7 +22,8 @@ const props = {
   className: 'container',
   children: 'Hello World',
 }
-const element = <div {...props} className='my-class'>Goodbye World</div>
+
+const element = <div {...props} className='my-class' />
 // this is a self closing div which spreads the props constant throughout the div.
 // If you use {} in JSX, you can then interpolate any JS code and it will work.
 // similar to object spread in JS.
