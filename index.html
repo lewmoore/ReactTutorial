@@ -6,6 +6,10 @@
 
 const rootElement = document.getElementById('root')
 const Message = (props) => <div>{props.children}</div>
+// To create custom components, assign a variable to props which then takes a function with a div.
+// Then call props.children allows you to add the message in as below instead of like:
+  //<Message, {msg: 'Hello World'} />
+  //line 11 would be used if props.msg was called in the props function
 const element = (
   <div className="container">
     <Message>Hello World</Message>
