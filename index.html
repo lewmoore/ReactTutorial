@@ -5,33 +5,14 @@
 <script type="text/babel">
 
 const rootElement = document.getElementById('root')
-// React createElement API is as simple as the element that you want to create,
-// and then an object that has all of the props that you want to have applied.
-// the children can be placed as arguments after the props object instead of as a prop itself
-// that is more for convenience
+const Message = (props) => <div>{props.children}</div>
+const element = (
+  <div className="container">
+    <Message>Hello World</Message>
+    <Message>Goodbye World</Message>
 
-// const element = React.createElement(
-//   'div', {
-//     className: 'container',
-//     children: 'Hello world'
-//   })
-
-const content = 'Hello World'
-const myClassName = 'container'
-const props = {
-  className: 'container',
-  children: 'Hello World',
-}
-
-const element = <div {...props} className='my-class' />
-// this is a self closing div which spreads the props constant throughout the div.
-// If you use {} in JSX, you can then interpolate any JS code and it will work.
-// similar to object spread in JS.
-
-// anything to the right of the props spread will over write anything that the props is giving
-// above example overwrites the className with myClass.
-// likewise with the children, closing the div and manually adding the children as arguments
-// will overwrite the props
+  </div>
+)
 
 
 ReactDOM.render(element, rootElement)
